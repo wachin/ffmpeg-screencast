@@ -66,10 +66,13 @@ To join the videos get on top of the script:
 
 <span><mark>→ join-mkv.sh</mark></span> 
 
-and hit Enter twice, and way a litle, the videos will be joined into the folder:
+and hit Enter twice, and wait a bit, the videos will be joined into the folder:
 
 🗀 recorded-videos
 
+if for some reason you need the initial videos they will be in the folder:
+
+🗀 Old
 
 ## To use it with a terminal
 To use with some Linux terminal, just write the name of the script  and execute with ENTER like:
