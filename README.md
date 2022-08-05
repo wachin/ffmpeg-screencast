@@ -21,7 +21,8 @@ this rectangle can be moved around the screen to capture what matters most to yo
 - Record rectangle
 - Follow mouse
 - Record in format: mkv
-- Record in format: mp4 (it is necessary to paste the corresponding profile into the folder 🗀 Profiles)
+- Record in format: mp4 (it is necessary to paste the corresponding profile inside the folder 🗀 Profiles)
+- Record in Full Screen (it is necessary to paste the corresponding profile iside the folder 🗀 Profiles)
 
 # Dependencies
 
@@ -94,10 +95,19 @@ I have made this program so that it records with the videos in the mkv format be
 
 🗀 Profiles
 
-where there are also profiles to record in full screen
+where there are also profiles to record in full screen, example:
 
+![](vx_images/570244321122966.png)
 
-There is others commands to record screen with ffmpeg, I made a tutorial about this but on spanish:
+and that is:
+
+![](vx_images/315614269937310.png)
+
+then run clex in a terminal in the main path and see:
+
+![](vx_images/115894179807496.png)
+
+hit Enter end the recorder are into the full screen
 
 # The beggining
 First I started doing some tutorials on how to record the screen with ffmpeg from the terminal. In Spanish:
