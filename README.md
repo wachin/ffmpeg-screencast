@@ -9,7 +9,7 @@ I had this idea because I saw the following abandoned project:
 # This is how it looks
 The folow screenshot is a terminal with the Clex File Manager for terminal inside. Hit Enter:
 
-![133606 ffmpeg-screencast](vx_images/526166604615691.png)
+![](vx_images/526166604615691.png)
 
 and working with record the screen in a rectangle of 854x480:
 
