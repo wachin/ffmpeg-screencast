@@ -7,7 +7,7 @@ I had this idea because I saw the following abandoned project:
 [https://github.com/raviraa/ffmpegui](https://github.com/raviraa/ffmpegui)
 
 # This is how it looks
-The folow screenshot is a terminal with the Clex File Manager for terminal inside. Hit Enter:
+The folow screenshot is the Konsole terminal with the Clex command line File Manager inside:
 
 ![](vx_images/526166604615691.png)
 
@@ -20,7 +20,8 @@ this rectangle can be moved around the screen to capture what matters most to yo
 ## Features
 - Record rectangle
 - Follow mouse
-
+- Record in format: mkv
+- Record in format: mp4 (it is necessary to paste the corresponding profile into the folder 🗀 Profiles)
 
 # Dependencies
 
