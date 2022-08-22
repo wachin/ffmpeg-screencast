@@ -2,7 +2,7 @@
 
 set -x       
 
-for i in `seq 5 -1 1` ; do echo -ne "\r$i " ; sleep 1 ; done
+cat /dev/zero | pv -B 1 -L 1 -tpe -s 5 -S > /dev/null
 
 ffmpeg -follow_mouse 50 -show_region 1 -video_size 854x480 -f 30 -f x11grab -i :0.0  \
        -f alsa -ac 2 -i default  \
@@ -23,19 +23,20 @@ ffmpeg -follow_mouse 50 -show_region 1 -video_size 854x480 -f 30 -f x11grab -i :
 # -acodec pcm_s16le -y output.mkv
 # In the command, -i :0.0 means to capture the primary screen (0.0). We're using libx264 video codec. To support some of the media players that does YUV planar color space with 4:2:0 chroma subsampling for H.264 vide, we can use -pix_fmt yuv420p, if no pixel format is specified, yuv444p for H.264 encoding will be used by default.
 
+# cat /dev/zero | pv -B 1 -L 1 -tpe -s 5 -S > /dev/null
 # Is there a way to display a countdown or stopwatch timer in a terminal? - Super User
 # https://superuser.com/questions/611538/is-there-a-way-to-display-a-countdown-or-stopwatch-timer-in-a-terminal
 # https://superuser.com/a/1445150/989620
+# If you have pv installed, you can use the following one-liner to display a countdown timer and sleep for a minute (or any other amount of time, just change 60 to the desired number of seconds):
+# cat /dev/zero | pv -B 1 -L 1 -tpe -s 60 -S > /dev/null
 # Explanation:
-# I know there are a lot of answers, but I just want to post something very close to OP's question, that personally I would accept as indeed "oneliner countdown in terminal". My goals were:
-# One liner.
-#   Countdown.
-#    Easy to remember and type in console (no functions and heavy logic, bash only).
-#    Does not require additional software to install (can be used on any server I go via ssh, even if I do not have root there).
-# How it works:
-# seq prints numbers from 60 to 1.
-# echo -ne "\r$i " returns caret to beginning of the string and prints current $i value. Space after it is required to overwrite previous value, if it was longer by characters than current $i (10 -> 9).
-
+# Cat /dev/zero produces an infinite amount of ASCII zero (\0) characters. pv displays progress, rate limits the data flowing through it and terminates after 60 characters (details below). Finally, the redirection to /dev/null makes sure that the \0 characters are not sent to the terminal.
+# The parameters used for pv are:
+# -B 1 sets the buffer size to 1.
+# -L 1 rate limits the pipe to 1 character per second.
+# -tpe turns on the display of the time, progress and ETA indicators (while -e only shows the latter).
+# -s 60 specifies that pv should expect 60 bytes.
+# -S tells pv to stop after reaching the specified size even though the input continues (it is infinite).
 
 # Investigated by Washington Indacochea Delgado, 2022
 # wachin.id@gmail.com
