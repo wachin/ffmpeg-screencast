@@ -27,7 +27,7 @@ this rectangle can be moved around the screen to capture what matters most to yo
 # Dependencies
 
 ```
-sudo apt install ffmpeg git clex
+sudo apt install ffmpeg git clex pv
 ```
 
 I suggest to use the Clex File Manager for command line usage, but you can also use: "nnn" or some terminal such as: xfce4-terminal, gnome-terminal, konsole, tilix, qterminal, etc, etc
