@@ -50,14 +50,52 @@ write in the terminal and hit Enter:
 
     clex
 
-The first time you use clex you should configure it, hit Enter some times for that, follow instructions and it will be ready to use
+The first time you use clex you should configure it, hit Enter some times for that:
+
+![](vx_images/20231023-225707-clex-enter.png)
+
+you hit enter again:
+
+![](vx_images/20231023-230142-you-it-enter-again.png)
+
+then appear:
+
+![](vx_images/20231023-230548-then-appear.png)
+
+**CLEX configuration utility**:
+
+```
+End of options mark '--' is supported
+Pager program: less
+Text editor: vi
+
+=== BEGIN ==================
+CMD_F3=less -- $f
+CMD_F4=vi -- $f
+CMD_F5=cp -ir -- $f $2
+CMD_F6=mv -i -- $f $2
+CMD_F7=mkdir -- 
+CMD_F8=rm -- $f
+CMD_F9=lpr -- $f
+=== END ====================
+
+Save this configuration (y/N) ? 
+```
+
+you need to give yes = y hit enter, and again hit enter, and it will be ready to use:
+
+![](vx_images/20231023-230922-move-to-ffmpeg-yuv444p-losseless-mkv.sh.png)
 
 ## Screencast
 Under clex first get on top of the script:
 
 <span><mark>→ ffmpeg-yuv444p-losseless-mkv.sh</mark></span>
 
-and hit Enter twice and it will start to record the screen in a box of 854x480 pixels
+![](vx_images/20231023-231106-you-are-in-ffmpeg-yuv444p-losseless-mkv.sh.png)
+
+and hit Enter twice and it will start to record the screen in a box of 854x480 pixels:
+
+![](vx_images/20231023-231359-record-working.png)
 
 to stop with:
 
