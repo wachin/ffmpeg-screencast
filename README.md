@@ -34,11 +34,13 @@ I suggest to use the Clex File Manager for command line usage, but you can also 
 
 # Installation
 
+I suggest that you clone this project into some folder, and that you know that this program will always be cloned there:
+
 ```
 git clone https://github.com/wachin/ffmpeg-screencast
 ```
 
-You must enter from a terminal into the cloned repository:
+next you must enter from a terminal into the cloned repository:
 
 ```
 cd ffmpeg-screencast
@@ -82,7 +84,7 @@ To use with some Linux terminal, just write the name of the script  and execute 
 **Screencast**
 
     ./ffmpeg-yuv444p-losseless-mkv.sh
-    
+
 You can help with tab to [autocomplete commands](https://www.computerhope.com/tips/tip176.htm)
 
 **Join videos**
